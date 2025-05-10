@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: united-airlines-deployment
+  labels:
+    app: united-airlines-deployment
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: united-airlines
+  template:
+    metadata:
+      labels:
+        app: united-airlines
+    spec:
+      containers:
+        - name: united-airlines
+          image: "united-airlines:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 8080
+#      imagePullSecrets:
+#        - name: "{{ .Values.image.pullSecret }}"

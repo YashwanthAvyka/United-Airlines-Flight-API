@@ -1,4 +1,4 @@
-## United Airlines Flight API:
+## United Airlines Flight API: Trigger
 A Spring Boot REST API for managing United Airlines flight data.
 - United Airlines MiniProject - Java 17 + Spring Boot 3
 - Functionality: CRUD REST API for managing flights
